@@ -1,0 +1,69 @@
+{%- style -%}
+  .divOne {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .errorIframe {
+    color: red;
+  }
+
+  .iframeSection {
+    width : {{ block.settings.widthMob }}px;
+    height: {{ block.settings.heightMob }}px;
+  }
+
+  @media screen and (min-width: 480px) {
+    .iframeSection {
+    width : {{ block.settings.widthDes }}px;
+    height: {{ block.settings.heightDes }}px;
+  }
+  }
+{%- endstyle -%}
+
+{% assign emb_code = product.metafields.bsmCode.src.value %}
+<div class="divOne">
+  {% if emb_code %}
+    <iframe
+      class="iframeSection"
+      src="{{ product.metafields.bsmCode.src.value }}"
+      frameborder="0"
+    ></iframe>
+  {%- else -%}
+    <p class="errorIframe">This does not contain valid URL</p>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "3D/AR",
+  "target": "section",
+  "settings": [
+    {
+      "type": "number",
+      "id": "widthDes",
+      "label": "Iframe width (Desktop)",
+      "default": 1000
+    },
+    {
+      "type": "number",
+      "id": "heightDes",
+      "label": "Iframe height (Desktop)",
+      "default": 700
+    },
+    {
+      "type": "number",
+      "id": "widthMob",
+      "label": "Iframe width (Mobile)",
+      "default": 400
+    },
+    {
+      "type": "number",
+      "id": "heightMob",
+      "label": "Iframe height (Mobile)",
+      "default": 600
+    }
+  ]
+}
+{% endschema %}

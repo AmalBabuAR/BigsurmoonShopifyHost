@@ -1,0 +1,147 @@
+.container {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.containerTwo {
+  margin-bottom: 20vh;
+  margin-top: 10vh;
+}
+
+.section {
+  width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section img {
+  margin-left: -10px;
+}
+.section h1 {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.section p {
+  margin-top: 11px;
+  font-size: 14px;
+}
+.section button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  width: 220px;
+  height: 41px;
+  border-radius: 4px;
+  border: 1px solid #babfc4;
+  background: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.section button:hover {
+  background: #e2dfdf;
+}
+
+.section h2 {
+  margin-top: 40px;
+  margin-bottom: 11px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.box {
+  margin-top: 23px;
+  display: flex;
+  border-radius: 10px;
+  background: linear-gradient(0deg, #fff 0%, #fff 100%), #fff;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.boxSectionOne {
+  width: 437px;
+  height: 268px;
+  border-radius: 10px 0px 0px 10px;
+  position: relative;
+}
+
+.boxSectionTwo {
+  padding: 26px 50px 26px 22px;
+}
+
+.boxSectionTwo h1 {
+  font-size: 18px;
+}
+
+.boxSectionTwo p {
+  margin-top: 11px;
+  font-size: 15px;
+}
+
+.boxSectionTwo li {
+  margin-left: 15px;
+}
+
+.boxSectionOneDiv {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 1200px) {
+  .box {
+    flex-direction: column;
+    width: 437px;
+  }
+
+  .section {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section img {
+    margin-left: 0px;
+  }
+
+  .boxSectionOne {
+    width: 437px;
+    height: 268px;
+    border-radius: 10px 10px 10px 10px;
+    position: relative;
+  }
+  .boxSectionOne img {
+    border-radius: 10px;
+  }
+
+  .boxSectionTwo {
+    padding: 26px 50px 26px 22px;
+  }
+
+  .boxSectionTwo h1 {
+    font-size: 16px;
+  }
+
+  .boxSectionTwo p {
+    margin-top: 11px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 500px) {
+  .box {
+    width: 320px;
+  }
+
+  .boxSectionOne {
+    width: 320px;
+  }
+  .boxSectionOne img {
+    width: 320px;
+  }
+  .boxSectionOneDiv img {
+    width: 250px;
+  }
+}

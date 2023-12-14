@@ -1,0 +1,28 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "Bigsurmoon"
+client_id = "55f478f6fa58b915b6ad287491cfc167"
+application_url = "https://truth-springfield-since-ages.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://truth-springfield-since-ages.trycloudflare.com/auth/callback",
+  "https://truth-springfield-since-ages.trycloudflare.com/auth/shopify/callback",
+  "https://truth-springfield-since-ages.trycloudflare.com/api/auth/callback",
+  "https://truth-springfield-since-ages.trycloudflare.com/.shopify/graphiql/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-10"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "bigsurmoon.myshopify.com"
